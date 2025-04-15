@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,6 +70,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="gauge-box">
@@ -111,5 +113,30 @@
         setInterval(updateGauges, 200);
         updateGauges();
     </script>
+
+<script>
+    (function (w, d, o, f) {
+      w[o] =
+        w[o] ||
+        function (config) {
+          var js = d.createElement("script");
+          js.src = f;
+          js.async = true;
+          js.onload = function () {
+            var e = d.createElement("div");
+            e.id = o;
+            d.body.appendChild(e);
+            w.init_chatislav
+              ? w.init_chatislav(o, config)
+              : console.error("chatislav init function not available.");
+          };
+          d.body.appendChild(js);
+        };
+    })(window, document, "ctslv_bbl", "https://chatislav.ai/api/static/chat-bot/index.js"
+    );
+    ctslv_bbl({ base_url: "https://chatislav.ai/api", token: "09d4d156-1904-4cdb-b9e9-5b2bdd7985d1" });
+  </script>
+
 </body>
+
 </html>

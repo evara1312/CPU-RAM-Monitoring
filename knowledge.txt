@@ -1,0 +1,40 @@
+Ovaj sajt koristi poseban sistem za praćenje performansi računara, uključujući CPU (centralnu procesorsku jedinicu) i virtuelnu memoriju (RAM).
+📌 Praćenje CPU-a:
+
+    CPU se meri u procentima (%), što pokazuje koliko se trenutno koristi od ukupnog kapaciteta procesora.
+
+    Na primer, ako je CPU opterećenje 50%, to znači da se koristi polovina ukupne snage procesora.
+
+    Visoka vrednost (npr. preko 90%) može ukazivati na intenzivne procese ili potencijalne probleme u sistemu.
+
+    Sistem koristi programske biblioteke za očitavanje trenutnog stanja CPU-a u realnom vremenu, kao što je psutil u Pythonu.
+
+    CPU podaci se mogu proveriti periodično i prikazati korisniku kada zatraži informaciju.
+
+🧠 Praćenje virtuelne memorije (RAM-a):
+
+    Virtuelna memorija predstavlja kombinaciju fizičkog RAM-a i dela hard diska koji se koristi kao dodatna memorija kada je RAM pun (swap).
+
+    Korišćenje memorije se takođe meri u procentima, što prikazuje koliko je memorije trenutno zauzeto.
+
+    Na primer, ako je RAM opterećenje 70%, znači da je zauzeto 70% ukupne memorije.
+
+    Ovaj sajt može prikazati trenutne vrednosti zauzeća memorije na osnovu podataka iz sistema.
+
+    Dugotrajna visoka upotreba memorije može dovesti do usporenja sistema, pa je korisno pratiti stanje.
+
+🛠️ Kako se informacije prikazuju:
+
+    Kada korisnik postavi pitanje o stanju sistema, AI bot koristi prethodno prikupljene informacije da odgovori.
+
+    Na primer, korisnik može pitati: „Koliko je trenutno opterećen procesor?“ ili „Koliko memorije se koristi?“.
+
+    AI će koristiti realne podatke i objašnjenja iz ovog teksta da pruži precizan i razumljiv odgovor.
+
+⚙️ Tehnička pozadina (za napredne korisnike):
+
+    Prikupljanje podataka se vrši putem skripti koje koriste Python biblioteku psutil.
+
+    Ove skripte se pokreću u pozadini i proveravaju stanje CPU-a i RAM-a u intervalima.
+
+    Podaci se zatim šalju bazi ili direktno servisu koji odgovara na korisnička pitanja.
